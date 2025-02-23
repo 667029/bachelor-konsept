@@ -26,23 +26,31 @@ root
 ├─ output/                # Filene som er ferdig prosessert
 ├─ modules/
 │  ├─ __init__py
-│  ├─ module0/            # Setter filene tilbake til utgangspunkt
+│  ├─ data_reset/            # Setter filene tilbake til utgangspunkt
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ move_file.py
-│  ├─ module1/            # Flytter filene fra input/ til storage/raw_data/
+│  ├─ ingestion/            # Flytt alle filer til raw_data/
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ move_file.py
-│  ├─ module2             # Kopierer gyldige filer fra storage/raw_data/ til storage/filtered_data/
+│  ├─ preparation/             # Pre-prosesserer filene 
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ copy_file.py
-│  ├─ module3             # Nytt navn til filene fra storage/filtered_data/ og plassert i storage/processed_data/
+│  ├─ classification/            # Flytt alle filer til raw_data/
+│  │  ├─ __init__.py
+│  │  ├─ pipeline.py
+│  │  └─ move_file.py
+│  ├─ extraction/            # Flytt alle filer til raw_data/
+│  │  ├─ __init__.py
+│  │  ├─ pipeline.py
+│  │  └─ move_file.py
+│  ├─ enrichment/             # Beriker klassifiserte filer med uttrekt data
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ rename_file.py
-│  └─ module4/            # Flytter filene fra storage/processed_data/ til output/
+│  └─ curation/            # Flytter ferdigprosesserte filer til output/
 │     ├─ __init__.py
 │     ├─ pipeline.py
 │     └─ move_file.py
