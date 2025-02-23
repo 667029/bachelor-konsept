@@ -24,23 +24,35 @@ if not input_files:
 
     exit(1)
 
-# 1️⃣ Flytt alle filer til raw_data/
-print("✅ Initialiserer modul: Ingestion")
+# Flytt alle filer til raw_data/
+print("✅ Initialiserer modul: ingestion")
 subprocess.run(["python3", "modules/ingestion/pipeline.py"] + input_files, check=True)
 
-# 2️⃣ Pre-prosesserer filene 
+# Pre-prosesserer filene 
 raw_files = os.listdir("storage/raw_data")
 print("✅ Initialiserer modul: preparation")
 subprocess.run(["python3", "modules/preparation/pipeline.py"] + raw_files, check=True)
 
-# 3️⃣ Beriker klassifiserte filer
+#TODO
+# Klassifisering av filene 
+#??? = os.listdir("storage/???")
+#print("✅ Initialiserer modul: classification")
+#subprocess.run(["python3", "modules/classification/pipeline.py"] + ???, check=True)
+
+#TODO
+# Data uttrekk av filene 
+#??? = os.listdir("storage/???")
+#print("✅ Initialiserer modul: extraction")
+#subprocess.run(["python3", "modules/extraction/pipeline.py"] + ???, check=True)
+
+# Beriker klassifiserte filer med uttrekt data
 filtered_files = os.listdir("storage/filtered_data")
-print("✅ Initialiserer modul: Enrichment")
+print("✅ Initialiserer modul: enrichment")
 subprocess.run(["python3", "modules/enrichment/pipeline.py"] + filtered_files, check=True)
 
-# 4️⃣ Flytter ferdigprosesserte filer til output/
+# Flytter ferdigprosesserte filer til output/
 processed_files = os.listdir("storage/processed_data")
-print("✅ Initialiserer modul: Curation")
+print("✅ Initialiserer modul: curation")
 subprocess.run(["python3", "modules/curation/pipeline.py"] + processed_files, check=True)
 
 print("✅ Hovedpipeline fullført! Sjekk output-mappen.")
