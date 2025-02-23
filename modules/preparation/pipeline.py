@@ -1,9 +1,9 @@
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
-from modules.module2.copy_file import CopyFileModule
+from modules.preparation.copy_file import CopyFileModule
 
-INCLUDED_EXTENSIONS = [".txt", ".png"]  # Ekskluder spesifikke filtyper
+INCLUDED_EXTENSIONS = [".txt", ".png"]  # Inkluderer spesifikke filtyper
 MAX_FILE_SIZE_MB = 1  # Ekskluder filer større enn 1 MB
 
 if len(sys.argv) < 2:
@@ -34,4 +34,4 @@ if __name__ == "__main__":
         copy_module.process(input_file, output_dir)
 
     
-    print("✅ Modul 2: Alle filer kopiert til temp-filtered/")
+    print("✅ Modul preparation: Alle filer kopiert til temp-filtered/")

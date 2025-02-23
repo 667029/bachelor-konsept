@@ -1,8 +1,8 @@
 import os
 import pytest
-from modules.module1.copy_file import CopyFileModule
-from modules.module2.move_file import MoveFileModule
-from modules.module3.rename_file import RenameFileModule
+from modules.ingestion.copy_file import CopyFileModule
+from modules.preparation.move_file import MoveFileModule
+from modules.enrichment.rename_file import RenameFileModule
 
 TEST_INPUT_FILE = "input/test_sample.txt"
 TEST_OUTPUT_DIR = "tests/output"
