@@ -16,17 +16,17 @@ Serveren: http://localhost:5000/ || http://127.0.0.1:5000
 
 ```
 root
-├─ input/                 # Filene som skal prosesseres
+├─ input/                   # Filene som skal prosesseres
 │  ├─ input0.png
 │  ├─ input1.png
 │  ├─ input2.txt
 │  ├─ input3.txt
 │  ├─ input4.log
 │  └─ input5.csv
-├─ output/                # Filene som er ferdig prosessert
+├─ output/                  # Filene som er ferdig prosessert
 ├─ modules/
 │  ├─ __init__py
-│  ├─ data_reset/            # Setter filene tilbake til utgangspunkt
+│  ├─ data_reset/           # Setter filene tilbake til utgangspunkt
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ move_file.py
@@ -34,36 +34,34 @@ root
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ move_file.py
-│  ├─ preparation/             # Pre-prosesserer filene 
+│  ├─ preparation/          # Pre-prosesserer filene 
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ copy_file.py
-│  ├─ classification/            # Flytt alle filer til raw_data/
+│  ├─ classification/       # Flytt alle filer til raw_data/
 │  │  ├─ __init__.py
-│  │  ├─ pipeline.py
-│  │  └─ move_file.py
-│  ├─ extraction/            # Flytt alle filer til raw_data/
+│  │  └─ pipeline.py
+│  ├─ extraction/           # Flytt alle filer til raw_data/
 │  │  ├─ __init__.py
-│  │  ├─ pipeline.py
-│  │  └─ move_file.py
-│  ├─ enrichment/             # Beriker klassifiserte filer med uttrekt data
+│  │  └─ pipeline.py
+│  ├─ enrichment/           # Beriker klassifiserte filer med uttrekt data
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ rename_file.py
-│  └─ curation/            # Flytter ferdigprosesserte filer til output/
+│  └─ curation/             # Flytter ferdigprosesserte filer til output/
 │     ├─ __init__.py
 │     ├─ pipeline.py
 │     └─ move_file.py
-├─ storage/               # Lagringssone for data
+├─ storage/                 # Lagringssone for data
 │  ├─ raw_data/
 │  ├─ filtered_data/
 │  └─ processed_data/
-├─ tests/                 # Tester til system
+├─ tests/                   # Tester til system
 │  └─ test_pipeline.py
-├─ templates/             # Interface til nettsiden
+├─ templates/               # Interface til nettsiden
 │  └─ index.html
-├─ main_pipeline.py       # Pipelineprogrammet
-├─ app_pipeline.py        # Hovedprogrammet som starter server og interface
+├─ main_pipeline.py         # Pipelineprogrammet
+├─ app_pipeline.py          # Hovedprogrammet som starter server og interface
 ├─ README.md
 └─ requirements.txt
 ```
