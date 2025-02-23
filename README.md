@@ -38,16 +38,25 @@ root
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ copy_file.py
-│  ├─ classification/       # Flytt alle filer til raw_data/
+│  ├─ capture/              # Fanger innholdet av filene 
 │  │  ├─ __init__.py
 │  │  └─ pipeline.py
-│  ├─ extraction/           # Flytt alle filer til raw_data/
+│  ├─ classification/       # Klassifisering av filene 
+│  │  ├─ __init__.py
+│  │  └─ pipeline.py
+│  ├─ extraction/           # Data uttrekk av filene 
+│  │  ├─ __init__.py
+│  │  └─ pipeline.py
+│  ├─ validation/           # Validering av uttrekt data
 │  │  ├─ __init__.py
 │  │  └─ pipeline.py
 │  ├─ enrichment/           # Beriker klassifiserte filer med uttrekt data
 │  │  ├─ __init__.py
 │  │  ├─ pipeline.py
 │  │  └─ rename_file.py
+│  ├─ insights/             # Generer innsikt av prosessert data
+│  │  ├─ __init__.py
+│  │  └─ pipeline.py
 │  └─ curation/             # Flytter ferdigprosesserte filer til output/
 │     ├─ __init__.py
 │     ├─ pipeline.py
