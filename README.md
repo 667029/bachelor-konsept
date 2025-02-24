@@ -26,6 +26,7 @@ root
 │  ├─ input4.log
 │  └─ input5.csv
 ├─ output/                  # Filene som er ferdig prosessert
+├─ components/              # Funksjonelle komponenter som benyttes i modulene sin prosessering
 ├─ modules/
 │  ├─ __init__py
 │  ├─ data_reset/           # Setter filene tilbake til utgangspunkt
