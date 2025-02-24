@@ -33,25 +33,21 @@ raw_files = os.listdir("storage/raw_data")
 print("✅ Initialiserer modul: preparation")
 subprocess.run(["python3", "modules/preparation/pipeline.py"] + raw_files, check=True)
 
-#TODO
 # Fanger innholdet av filene 
 filtered_files = os.listdir("storage/filtered_data")
 print("✅ Initialiserer modul: capture")
 subprocess.run(["python3", "modules/capture/pipeline.py"] + filtered_files, check=True)
 
-#TODO
 # Klassifisering av filene 
 filtered_files = os.listdir("storage/filtered_data")
 print("✅ Initialiserer modul: classification")
 subprocess.run(["python3", "modules/classification/pipeline.py"] + filtered_files, check=True)
 
-#TODO
 # Data uttrekk av filene 
 filtered_files = os.listdir("storage/filtered_data")
 print("✅ Initialiserer modul: extraction")
 subprocess.run(["python3", "modules/extraction/pipeline.py"] + filtered_files, check=True)
 
-#TODO
 # Validering av uttrekt data
 filtered_files = os.listdir("storage/filtered_data")
 print("✅ Initialiserer modul: validation")
@@ -62,7 +58,6 @@ filtered_files = os.listdir("storage/filtered_data")
 print("✅ Initialiserer modul: enrichment")
 subprocess.run(["python3", "modules/enrichment/pipeline.py"] + filtered_files, check=True)
 
-#TODO
 # Generer innsikt av prosessert data
 processed_files = os.listdir("storage/processed_data")
 print("✅ Initialiserer modul: insights")
