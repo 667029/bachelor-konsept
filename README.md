@@ -69,7 +69,8 @@ root
 ├─ tests/                   # Tester til system
 │  └─ test_pipeline.py
 ├─ templates/               # Interface til nettsiden
-│  └─ index.html
+│  ├─ index.html
+│  └─ upload_success.html
 ├─ main_pipeline.py         # Pipelineprogrammet
 ├─ app_pipeline.py          # Hovedprogrammet som starter server og interface
 ├─ README.md
