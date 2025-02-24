@@ -9,13 +9,13 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 input_dir = "storage/filtered_data"
-output_dir = ""
+output_dir = "???"
 
 if __name__ == "__main__":
     
 
     for file in sys.argv[1:]:  # Itererer over ALLE filene
-        input_file = os.path.join(input_dir, file)
+        print(f"🔄 Prosessert fil: {file}")
         
 
     print("✅ Modul classification: Alle prosesserte filer er klassifisert")
