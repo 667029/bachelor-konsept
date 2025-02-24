@@ -14,14 +14,9 @@
 </head>
 <body>
 
-    <h2>📂 Last opp en fil</h2>
-    <p>Støttede formater: .txt, .csv, .json, .xml, .jpeg, .pdf</p>
+    <h2>Opplasting fullført!</h2>
+    <p>Du lastet opp fil: {{ filename }}</p>
 
-    <form action="/" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" required>
-        <button type="submit">Last opp</button>
-    </form>
-    
     <form action="/back" method="post">
         <button type="submit">Tilbakestill</button>
     </form>
