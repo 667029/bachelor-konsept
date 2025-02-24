@@ -35,27 +35,27 @@ subprocess.run(["python3", "modules/preparation/pipeline.py"] + raw_files, check
 
 #TODO
 # Fanger innholdet av filene 
-#??? = os.listdir("storage/???")
-#print("✅ Initialiserer modul: capture")
-#subprocess.run(["python3", "modules/capture/pipeline.py"] + ???, check=True)
+filtered_files = os.listdir("storage/filtered_data")
+print("✅ Initialiserer modul: capture")
+subprocess.run(["python3", "modules/capture/pipeline.py"] + filtered_files, check=True)
 
 #TODO
 # Klassifisering av filene 
-#??? = os.listdir("storage/???")
-#print("✅ Initialiserer modul: classification")
-#subprocess.run(["python3", "modules/classification/pipeline.py"] + ???, check=True)
+filtered_files = os.listdir("storage/filtered_data")
+print("✅ Initialiserer modul: classification")
+subprocess.run(["python3", "modules/classification/pipeline.py"] + filtered_files, check=True)
 
 #TODO
 # Data uttrekk av filene 
-#??? = os.listdir("storage/???")
-#print("✅ Initialiserer modul: extraction")
-#subprocess.run(["python3", "modules/extraction/pipeline.py"] + ???, check=True)
+filtered_files = os.listdir("storage/filtered_data")
+print("✅ Initialiserer modul: extraction")
+subprocess.run(["python3", "modules/extraction/pipeline.py"] + filtered_files, check=True)
 
 #TODO
 # Validering av uttrekt data
-#??? = os.listdir("storage/???")
-#print("✅ Initialiserer modul: validation")
-#subprocess.run(["python3", "modules/validation/pipeline.py"] + ???, check=True)
+filtered_files = os.listdir("storage/filtered_data")
+print("✅ Initialiserer modul: validation")
+subprocess.run(["python3", "modules/validation/pipeline.py"] + filtered_files, check=True)
 
 # Beriker klassifiserte filer med uttrekt data
 filtered_files = os.listdir("storage/filtered_data")

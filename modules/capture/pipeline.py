@@ -8,7 +8,7 @@ if len(sys.argv) < 2:
     print("❌ Ingen fil spesifisert.")
     sys.exit(1)
 
-input_dir = ""
+input_dir = "storage/filtered_data"
 output_dir = ""
 
 if __name__ == "__main__":
