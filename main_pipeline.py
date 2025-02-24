@@ -64,9 +64,9 @@ subprocess.run(["python3", "modules/enrichment/pipeline.py"] + filtered_files, c
 
 #TODO
 # Generer innsikt av prosessert data
-#??? = os.listdir("storage/???")
-#print("✅ Initialiserer modul: insights")
-#subprocess.run(["python3", "modules/insights/pipeline.py"] + ???, check=True)
+processed_files = os.listdir("storage/processed_data")
+print("✅ Initialiserer modul: insights")
+subprocess.run(["python3", "modules/insights/pipeline.py"] + processed_files, check=True)
 
 # Flytter ferdigprosesserte filer til output/
 processed_files = os.listdir("storage/processed_data")
