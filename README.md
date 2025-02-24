@@ -27,20 +27,20 @@ root
 │  └─ input5.csv
 ├─ output/                  # Filene som er ferdig prosessert
 ├─ components/              # Funksjonelle komponenter som benyttes i modulene sin prosessering
+│  ├─ rename_file.py
+│  ├─ copy_file.py
+│  └─ move_file.py
 ├─ modules/
 │  ├─ __init__py
 │  ├─ data_reset/           # Setter filene tilbake til utgangspunkt
 │  │  ├─ __init__.py
-│  │  ├─ pipeline.py
-│  │  └─ move_file.py
+│  │  └─ pipeline.py
 │  ├─ ingestion/            # Flytt alle filer til raw_data/
 │  │  ├─ __init__.py
-│  │  ├─ pipeline.py
-│  │  └─ move_file.py
+│  │  └─ pipeline.py
 │  ├─ preparation/          # Pre-prosesserer filene 
 │  │  ├─ __init__.py
-│  │  ├─ pipeline.py
-│  │  └─ copy_file.py
+│  │  └─ pipeline.py
 │  ├─ capture/              # Fanger innholdet av filene 
 │  │  ├─ __init__.py
 │  │  └─ pipeline.py
@@ -55,15 +55,13 @@ root
 │  │  └─ pipeline.py
 │  ├─ enrichment/           # Beriker klassifiserte filer med uttrekt data
 │  │  ├─ __init__.py
-│  │  ├─ pipeline.py
-│  │  └─ rename_file.py
+│  │  └─ pipeline.py
 │  ├─ insights/             # Generer innsikt av prosessert data
 │  │  ├─ __init__.py
 │  │  └─ pipeline.py
 │  └─ curation/             # Flytter ferdigprosesserte filer til output/
-│     ├─ __init__.py
-│     ├─ pipeline.py
-│     └─ move_file.py
+│  │  ├─ __init__.py
+│  │  └─ pipeline.py
 ├─ storage/                 # Lagringssone for data
 │  ├─ raw_data/
 │  ├─ filtered_data/
