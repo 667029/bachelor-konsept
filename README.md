@@ -4,12 +4,14 @@ pip install -r requirements.txt
 
 Starte server:
 ```
-python3 app.py
+Mac:      python3 app.py
+Windows:  python app.py
 ```
 
 Starte/Kjøre gjennom terminal:
 ```
-python3 main_pipeline.py
+Mac:      python3 main_pipeline.py
+Windows:  python main_pipeline.py
 ```
 Serveren: http://localhost:5000/ || http://127.0.0.1:5000
 
