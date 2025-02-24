@@ -1,6 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
 import subprocess
+import platform
+
+def get_python_command():
+    # Oppdag hvilket OS programmet kjører på
+    current_os = platform.system()
+    
+    # Sett python-kommando basert på hvilket OS det er
+    if current_os == "Windows":
+        return "python"   # som oftest python på Windows
+    else:
+        return "python3"  # som oftest python3 på Unix-baserte systemer
+    
+python_cmd = get_python_command()
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "input"
@@ -26,7 +39,7 @@ def upload_file():
             file.save(file_path)
 
             # 🟢 Kjør pipelinen etter opplasting
-            subprocess.run(["python3", "main_pipeline.py"], check=True)
+            subprocess.run([python_cmd, "main_pipeline.py"], check=True)
 
             return redirect(url_for("upload_success", filename=file.filename))
 
