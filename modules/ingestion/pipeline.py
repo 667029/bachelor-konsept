@@ -1,7 +1,7 @@
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
-from modules.ingestion.move_file import MoveFileModule
+from components.move_file import MoveFileModule
 
 if len(sys.argv) < 2:
     print("❌ Ingen fil spesifisert.")

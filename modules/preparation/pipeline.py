@@ -1,7 +1,7 @@
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
-from modules.preparation.copy_file import CopyFileModule
+from components.copy_file import CopyFileModule
 
 INCLUDED_EXTENSIONS = [".txt", ".png"]  # Inkluderer spesifikke filtyper
 MAX_FILE_SIZE_MB = 1  # Ekskluder filer større enn 1 MB

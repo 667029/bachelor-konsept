@@ -1,7 +1,7 @@
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
-from modules.enrichment.rename_file import RenameFileModule
+from components.rename_file import RenameFileModule
 
 if len(sys.argv) < 2:
     print("❌ Ingen filer spesifisert.")
