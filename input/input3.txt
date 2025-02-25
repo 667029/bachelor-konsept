@@ -1,1 +1,3 @@
-SKIP
+Faktura test
+
+25/01/2025

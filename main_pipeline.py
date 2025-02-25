@@ -34,6 +34,10 @@ if not input_files:
     folder_path = "output"
     for file in glob.glob(f"{folder_path}/*"):  # Henter alle filer i mappen
         os.remove(file)  # Sletter hver fil
+    
+    folder_path = "storage/captured_data"
+    for file in glob.glob(f"{folder_path}/*"):  # Henter alle filer i mappen
+        os.remove(file)  # Sletter hver fil
 
     exit(1)
 
