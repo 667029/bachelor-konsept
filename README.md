@@ -29,6 +29,8 @@ root
 ├─ components/              # Funksjonelle komponenter som benyttes i modulene sin prosessering
 │  ├─ rename_file.py
 │  ├─ copy_file.py
+│  ├─ data_capture.py
+│  ├─ regex_extraction.py
 │  └─ move_file.py
 ├─ modules/
 │  ├─ __init__py
@@ -64,6 +66,7 @@ root
 │  │  └─ pipeline.py
 ├─ storage/                 # Lagringssone for data
 │  ├─ raw_data/
+│  ├─ captured_data/
 │  ├─ filtered_data/
 │  └─ processed_data/
 ├─ tests/                   # Tester til system

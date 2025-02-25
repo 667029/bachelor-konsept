@@ -22,6 +22,7 @@ os.makedirs("output", exist_ok=True)
 os.makedirs("storage/raw_data", exist_ok=True)
 os.makedirs("storage/filtered_data", exist_ok=True)
 os.makedirs("storage/processed_data", exist_ok=True)
+os.makedirs("storage/captured_data", exist_ok=True)
 
 # Hent alle filer fra input-mappen
 input_files = os.listdir("input")
